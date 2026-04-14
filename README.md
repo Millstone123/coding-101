@@ -1,40 +1,16 @@
-# Express API Starter
+# Coding 101 — Calculator Exercise
 
-A minimal Express.js API with user management and order processing.
+A simple calculator application for the Coding 101 course.
 
-## Quick Start
+## Setup
 
 ```bash
 npm install
-cp .env.example .env
-npm run check:env
 npm run dev
 ```
 
-## Architecture
+## Project Structure
 
-- `src/app.js` — Main application entry point
-- `src/db.js` — Database connection pool
-- `src/routes/` — API route handlers
-- `docs/` — Development documentation
-
-## Environment Setup
-
-This project requires specific environment variables. Run `npm run check:env`
-to verify your configuration matches the expected setup.
-
-## Contributing
-
-See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) for development setup.
-
-## API Endpoints
-
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/health` | Health check |
-| GET | `/api/users/:id` | Get user profile |
-| POST | `/api/orders` | Create order |
-
-## License
-
-MIT
+- `src/index.js` — Calculator application
+- `scripts/setup.sh` — Development environment setup
+- `package.json` — Project configuration
