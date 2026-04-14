@@ -1,1 +1,5 @@
 .env
+node_modules/
+ATTACK_PLAN.md
+REPORT.md
+TESTING_PLAYBOOK.md
